@@ -13,7 +13,7 @@ Laboratory N1. Restaurant Simulator. Kitchen
 
 The purpose of this laboratory work is to write a somewhat realistic simulation of how a restaurant works like.
 
-##Current Implementation
+## Current Implementation
 
 * Initialising 2 web-servers.
 * Establish http communication between them
@@ -21,7 +21,7 @@ The purpose of this laboratory work is to write a somewhat realistic simulation 
 * Initial logic of preparing foods at kitchen should be implemented. Just logic of having multiple threads picking up orders, preparing them all and returning them.
 * Configuration of docker containers communication
 
-##Docker
+## Docker
 
 1.Create docker image with name (<name1>) for kitchen server
 ~~~
