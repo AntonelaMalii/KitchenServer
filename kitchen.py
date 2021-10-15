@@ -7,7 +7,15 @@ import threading
 import requests
 
 time_unit = 1
-foods_list = queue.Queue()
+foods_q = queue.Queue()
+stoves_q = queue.Queue()
+ovens_q = queue.Queue()
+stoves_q.put_nowait(0)
+stoves_q.put_nowait(1)
+stoves_q.put_nowait(2)
+ovens_q.put_nowait(0)
+ovens_q.put_nowait(1)
+ovens_q.put_nowait(2)
 orders = []
 restaurant_cooks = [{
     "id": 1,
@@ -115,13 +123,14 @@ def split_order(input_order):
     for idx in input_order['items']:
         food_item = next((f for i, f in enumerate(menu) if f['id'] == idx), None)
         if food_item is not None:
-            foods_list.put_nowait({
+            foods_q.put_nowait({
                 'food_id': food_item['id'],
                 'order_id': input_order['order_id']
             })
 
 
-def cooking_process(cook, food_items: queue.Queue):
+
+def cooking_process(cook, stoves: queue.Queue, ovens: queue.Queue, food_items: queue.Queue):
     while True:
         try:
             food_item = food_items.get_nowait()
@@ -130,7 +139,16 @@ def cooking_process(cook, food_items: queue.Queue):
             len_order_items = len(orders[idx]['items'])
             # check if cook can afford to do this type of food
             if food_details['complexity'] == cook['rank'] or food_details['complexity'] == cook['rank'] - 1:
-                print(f'{threading.current_thread().name} cooking food {food_details["name"]}: with Id {food_details["id"]} for order {order_details["order_id"]}')
+                cooking_aparatus = food_details['cooking-apparatus']
+                if cooking_aparatus is None:
+                    print(f'{threading.current_thread().name} cooking food {food_details["name"]}: with Id {food_details["id"]} for order {order_details["order_id"]} manually')
+                elif cooking_aparatus == 'oven':
+                    oven = ovens.get_nowait()
+                    print(f'{threading.current_thread().name} cooking food {food_details["name"]}: with Id {food_details["id"]} for order {order_details["order_id"]} on oven {oven} ')
+                elif cooking_aparatus == 'stove':
+                    stove = stoves.get_nowait()
+                    print(f'{threading.current_thread().name} cooking food {food_details["name"]}: with Id {food_details["id"]} for order {order_details["order_id"]} on stove {stove} ')
+
                 time.sleep(food_details['preparation-time'] * time_unit)
                 orders[idx]['prepared_items'] += 1
                 if orders[idx]['prepared_items'] == len_order_items:
@@ -145,6 +163,13 @@ def cooking_process(cook, food_items: queue.Queue):
                     }
                     requests.post('http://localhost:3000/distribution', json=payload, timeout=0.0000000001)
 
+                if cooking_aparatus == 'oven':
+                    length = ovens.qsize()
+                    ovens.put_nowait(length)
+                elif cooking_aparatus == 'stove':
+                    length = stoves.qsize()
+                    stoves.put_nowait(length)
+
             else:
                 food_items.put_nowait(food_item)
 
@@ -152,10 +177,10 @@ def cooking_process(cook, food_items: queue.Queue):
             pass
 
 
-def cooks_multitasking_process(cook, food_items):
+def cooks_multitasking_process(cook, ovens, stoves, food_items):
     for i in range(cook['proficiency']):
-        hand_thread = threading.Thread(target=cooking_process, args=(cook, food_items,), daemon=True, name=f'{cook["name"]}-Task {i}')
-        hand_thread.start()
+        task_thread = threading.Thread(target=cooking_process, args=(cook, ovens, stoves, food_items,), daemon=True, name=f'{cook["name"]}-Task {i}')
+        task_thread.start()
 
 
 def run_kitchen_server():
@@ -163,7 +188,7 @@ def run_kitchen_server():
     main_thread.start()
 
     for _, cook in enumerate(restaurant_cooks):
-        cook_thread = threading.Thread(target=cooks_multitasking_process, args=(cook, foods_list,), daemon=True)
+        cook_thread = threading.Thread(target=cooks_multitasking_process, args=(cook,ovens_q,stoves_q, foods_q,), daemon=True)
         cook_thread.start()
 
     while True:
