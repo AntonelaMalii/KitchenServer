@@ -196,5 +196,3 @@ def run_kitchen_server():
 
 if __name__ == '__main__':
     run_kitchen_server()
-
-

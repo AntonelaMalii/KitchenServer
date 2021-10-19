@@ -1,0 +1,110 @@
+New order sent to kitchen server 57728328
+Gordon Ramsay-Task 2 cooking food Aubergine: with Id 7 for order 57728328 manually
+Alain Ducasse-Task 0 cooking food Aubergine: with Id 7 for order 57728328 manually
+Pierre Gagnaire-Task 0 cooking food Aubergine: with Id 7 for order 57728328 manually
+127.0.0.1 - - [19/Oct/2021 03:27:34] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 1 cooking food pizza: with Id 1 for order 57728328 on oven 0
+New order sent to kitchen server 61885550
+127.0.0.1 - - [19/Oct/2021 03:27:35] "POST /order HTTP/1.1" 200 -
+Gordon Ramsay-Task 1 cooking food Lasagna: with Id 8 for order 61885550 on oven 1
+New order sent to kitchen server 16882184
+127.0.0.1 - - [19/Oct/2021 03:27:36] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 1 cooking food Gyros: with Id 10 for order 16882184 manually
+New order sent to kitchen server 126684
+Gordon Ramsay-Task 0 cooking food Lasagna: with Id 8 for order 126684 on oven 2
+127.0.0.1 - - [19/Oct/2021 03:27:38] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cooking food Gyros: with Id 10 for order 126684 manually
+127.0.0.1 - - [19/Oct/2021 03:27:40] "POST /order HTTP/1.1" 200 -
+New order sent to kitchen server 40692288
+Alain Ducasse-Task 2 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 40692288 manually
+Pierre Gagnaire-Task 1 cook has finished the order 16882184
+Calculating
+Pierre Gagnaire-Task 1 cooking food Waffles: with Id 6 for order 40692288 on stove 0
+Pierre Gagnaire-Task 2 cooking food Gyros: with Id 10 for order 40692288 manually
+Alain Ducasse-Task 0 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 40692288 manually
+Alain Ducasse-Task 1 cook has finished the order 57728328
+Calculating
+Gordon Ramsay-Task 1 cook has finished the order 61885550
+Calculating
+New order sent to kitchen server 20073732
+Gordon Ramsay-Task 2 cooking food Waffles: with Id 6 for order 20073732 on stove 1
+127.0.0.1 - - [19/Oct/2021 03:28:07] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 1 cooking food Island Duck with Mulberry Mustard: with Id 5 for order 20073732 on oven 0
+New order sent to kitchen server 12549150
+Gordon Ramsay-Task 0 cooking food Gyros: with Id 10 for order 12549150 manually
+127.0.0.1 - - [19/Oct/2021 03:28:16] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cooking food Burger: with Id 9 for order 12549150 on oven 1
+Alain Ducasse-Task 0 cook has finished the order 40692288
+Calculating
+Pierre Gagnaire-Task 2 cook has finished the order 12549150
+Calculating
+New order sent to kitchen server 74619426
+Alain Ducasse-Task 0 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 74619426 manually
+127.0.0.1 - - [19/Oct/2021 03:28:39] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 1 cooking food Burger: with Id 9 for order 74619426 on oven 1
+Alain Ducasse-Task 1 cook has finished the order 20073732
+Calculating
+New order sent to kitchen server 27749448
+Gordon Ramsay-Task 1 cooking food pizza: with Id 1 for order 27749448 on oven 1
+127.0.0.1 - - [19/Oct/2021 03:28:48] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 2 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 27749448 manually
+New order sent to kitchen server 20616960
+Alain Ducasse-Task 1 cooking food Lasagna: with Id 8 for order 20616960 on oven 1
+127.0.0.1 - - [19/Oct/2021 03:29:00] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cooking food Lasagna: with Id 8 for order 20616960 on oven 1
+Alain Ducasse-Task 0 cook has finished the order 74619426
+Calculating
+New order sent to kitchen server 2862912
+Pierre Gagnaire-Task 1 cooking food Lasagna: with Id 8 for order 2862912 on oven 0
+127.0.0.1 - - [19/Oct/2021 03:29:16] "POST /order HTTP/1.1" 200 -
+New order sent to kitchen server 52172808
+127.0.0.1 - - [19/Oct/2021 03:29:19] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 0 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 2862912 manually
+Alain Ducasse-Task 2 cook has finished the order 27749448
+Calculating
+New order sent to kitchen server 18626130
+127.0.0.1 - - [19/Oct/2021 03:29:27] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cook has finished the order 20616960
+Calculating
+New order sent to kitchen server 4711938
+127.0.0.1 - - [19/Oct/2021 03:29:35] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 1 cooking food Aubergine: with Id 7 for order 4711938 manuallyPierre Gagnaire-Task 2 cooking food Waffles: with Id 6 for order 4711938 on stove 2
+
+New order sent to kitchen server 50534752
+127.0.0.1 - - [19/Oct/2021 03:29:42] "POST /order HTTP/1.1" 200 -
+Gordon Ramsay-Task 0 cooking food Aubergine: with Id 7 for order 50534752 manually
+Alain Ducasse-Task 2 cooking food Island Duck with Mulberry Mustard: with Id 5 for order 50534752 on oven 0
+New order sent to kitchen server 37540140
+Pierre Gagnaire-Task 2 cooking food Waffles: with Id 6 for order 37540140 on stove 2
+127.0.0.1 - - [19/Oct/2021 03:29:50] "POST /order HTTP/1.1" 200 -
+Alain Ducasse-Task 0 cooking food Island Duck with Mulberry Mustard: with Id 5 for order 37540140 on oven 1
+Alain Ducasse-Task 1 cook has finished the order 4711938
+Calculating
+New order sent to kitchen server 86970394
+Pierre Gagnaire-Task 1 cooking food Lasagna: with Id 8 for order 86970394 on oven 1
+Alain Ducasse-Task 1 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 37540140 manually
+127.0.0.1 - - [19/Oct/2021 03:29:56] "POST /order HTTP/1.1" 200 -
+New order sent to kitchen server 6898425
+Gordon Ramsay-Task 2 cooking food Aubergine: with Id 7 for order 6898425 manually
+Pierre Gagnaire-Task 2 cooking food salad: with Id 2 for order 6898425 manually
+127.0.0.1 - - [19/Oct/2021 03:30:02] "POST /order HTTP/1.1" 200 -
+New order sent to kitchen server 52753860
+127.0.0.1 - - [19/Oct/2021 03:30:08] "POST /order HTTP/1.1" 200 -
+New order sent to kitchen server 4387305
+127.0.0.1 - - [19/Oct/2021 03:30:12] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cooking food Aubergine: with Id 7 for order 4387305 manually
+Alain Ducasse-Task 2 cook has finished the order 50534752
+Calculating
+Alain Ducasse-Task 2 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 37540140 manually
+New order sent to kitchen server 7110948
+127.0.0.1 - - [19/Oct/2021 03:30:21] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 0 cooking food Burger: with Id 9 for order 7110948 on oven 0
+Gordon Ramsay-Task 0 cooking food Gyros: with Id 10 for order 7110948 manuallyGordon Ramsay-Task 2 cooking food Gyros: with Id 10 for order 7110948 manually
+
+Alain Ducasse-Task 0 cooking food Scallop Sashimi with Meyer Lemon Confit: with Id 4 for order 86970394 manually
+Alain Ducasse-Task 1 cooking food Island Duck with Mulberry Mustard: with Id 5 for order 7110948 on oven 0
+New order sent to kitchen server 13052100
+Pierre Gagnaire-Task 1 cooking food Lasagna: with Id 8 for order 13052100 on oven 1
+127.0.0.1 - - [19/Oct/2021 03:30:28] "POST /order HTTP/1.1" 200 -
+Pierre Gagnaire-Task 2 cook has finished the order 4387305
+Calculating
