@@ -25,15 +25,14 @@ The purpose of this laboratory work is to write a somewhat realistic simulation 
 * Handling cooks multitasking according to their proficiency
 * Add all atributes necessary for orders when sending and receiving
 * Calculating Order_total_preparing_time and defining the rating of the restaurant according to the feedbacks
-* 70%
-* Still need to implement the cooking-aparatus logic 
-* Still need to implement prioritising ordering
+* The cooking-aparatus logic 
+* The prioritising ordering
 
 ## Docker
 
 1.Create docker image with name (<name1>) for kitchen server
 ~~~
-docker build --tag <name1> 
+docker build --tag <name1> .
 ~~~
 2.Create docker communication network (<name2>) for dinning hall server and kitchen server to communicate on
 ~~~
